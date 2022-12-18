@@ -24,8 +24,11 @@
         double k2 = Convert.ToDouble(Console.ReadLine());
         double y = 0;
         double x = 0;
+        //x = (y - b1) / k1;
+        //y = k2 * (y - b1) / k1 + b2;
+        //y = k1(b2-b1)/(k1-k2)=((k1*b2)-(k2*b1))/(k2*b1);
+        y = ((k1*b2)-(k2*b1))/(k1 - k2);
         x = (y - b1) / k1;
-        y = k2 * (y - b1) / k1 + b2;
         Console.WriteLine($"Точка пересечения по координатам :{x};{y}");
     }
 }
