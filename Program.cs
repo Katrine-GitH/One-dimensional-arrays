@@ -1,40 +1,7 @@
-﻿using System;
-
-namespace Ex41
-{
-    class Program
-    {
-        // Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
-        // 0, 7, 8, -2, -2 -> 2
-        // 1, -7, 567, 89, 223-> 3
-        // Ввод масива
-        static int[] getArray()
-        {
-            //  return new int[5] { 0, 7, 8, -2, -2 };
-
-
-            int[] Array = new int[5];
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine("Введите числа");
-                Array[i] = int.Parse(Console.ReadLine());
-            }
-
-            return Array;
-        }
-        static void Main(string[] args)
-        {
-            int[] Array = getArray();
-            int value = 0;
-            for (int i = 0; i < 5; i++)
-            {
-                if (Array[i] > 0)
-                {
-                    value += 1;
-                }
-            }
-            Console.WriteLine($"Чисел больше нуля:{value}");
-            Console.ReadLine();
-        }
-    }
-}
+﻿// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых,
+// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+var coordinate1 = MyLibrary.Coordinate();
+//using static MyLibrary
+//var coordinate1 = Coordinate();
+//Lib.Coordinate();
